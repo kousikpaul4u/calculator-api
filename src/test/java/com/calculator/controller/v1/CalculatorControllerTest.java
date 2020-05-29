@@ -3,6 +3,7 @@ package com.calculator.controller.v1;
 import com.calculator.constance.StatusConstants;
 import com.calculator.controller.V1.CalculatorController;
 import com.calculator.exception.ServiceException;
+import com.calculator.exception.UtilException;
 import com.calculator.model.Payload;
 import com.calculator.model.Response;
 import com.calculator.service.CalculatorService;
@@ -59,11 +60,11 @@ public class CalculatorControllerTest {
     }
 
     @Test
-    public void testCalculateInvalidServiceException() {
+    public void testCalculateInvalidUtilException() {
         Payload payload = Payload.builder()
                 .input("7+1")
                 .build();
-        Mockito.doThrow(new ServiceException(StatusConstants.HttpConstants.INVALID_INPUT)).when(calculatorService).calculate(payload.getInput());
+        Mockito.doThrow(new UtilException(StatusConstants.HttpConstants.INVALID_INPUT)).when(calculatorService).calculate(payload.getInput());
         MockHttpServletResponse mockHttpServletResponse = new MockHttpServletResponse();
         Response<String> response = calculatorController.calculate(payload, mockHttpServletResponse);
 
