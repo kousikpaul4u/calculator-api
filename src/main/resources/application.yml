@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  use-forward-headers: true
+
+spring:
+  application:
+    name: calculator-service-api
+  profiles:
+    active: "swagger"
+
+# Actuator
+endpoints:
+  autoconfig:
+    enabled: false
+  beans:
+    enabled: false
+  configprops:
+    enabled: false
+  dump:
+    enabled: false
+  env:
+    enabled: false
+  health:
+    path: /calculator-svc/health
+  info:
+    enabled: true
+    path: /calculator-svc/info
+  mappings:
+    enabled: false
+  metrics:
+    enabled: false
+  shutdown:
+    enabled: false
+  trace:
+    enabled: false
