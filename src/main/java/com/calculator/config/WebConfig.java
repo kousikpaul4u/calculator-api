@@ -11,7 +11,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/calculator-svc/swagger-ui.html**")
                 .addResourceLocations("classpath:/META-INF/resources/swagger-ui.html");
-        registry.addResourceHandler("/clt-svc/webjars/**")
+        registry.addResourceHandler("/calculator-svc/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 

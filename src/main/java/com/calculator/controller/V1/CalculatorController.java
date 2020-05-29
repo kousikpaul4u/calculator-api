@@ -3,7 +3,6 @@ package com.calculator.controller.V1;
 import com.calculator.constance.StatusConstants;
 import com.calculator.controller.ControllerSupport;
 import com.calculator.exception.InvalidRequestException;
-import com.calculator.exception.ServiceException;
 import com.calculator.exception.UtilException;
 import com.calculator.model.Payload;
 import com.calculator.model.Response;
